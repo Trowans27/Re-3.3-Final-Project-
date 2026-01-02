@@ -638,27 +638,122 @@ a {
 }
 
 #cta {
-  background: #651FFF;
+  width: 100%;
+  background: #ffffff; /* white page background per screenshot */
+  padding: 120px 0; /* ample whitespace above/below card */
+}
+
+#cta .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Top-right profile block (matches screenshot typography) */
+.testimonials-topbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profile__name {
+  font-weight: 700;
+  color: #1f2937; 
+  font-size: 14px;
+}
+
+.profile__role {
+  color: #6b7280; 
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.profile__controls {
+  display: flex;
+  gap: 8px;
+  margin-left: 8px;
+}
+
+.profile__btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #c4b5fd; /* lavender outline */
+  background: #ede9fe; /* light lavender fill */
+  color: #7c3aed; /* purple chevron */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cta__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 32px;
+  background: #6C30FF; /* deeper purple like screenshot */
+  border-radius: 16px;
+  padding: 48px 56px; /* card padding tighter */
+  position: relative;
+  overflow: hidden;
+  max-width: 920px; /* centered card width */
+  margin: 0 auto; /* center horizontally */
 }
 
 .cta__text {
-  font-size: 32px;
-  font-weight: 700;
-  color: white;
-  line-height: 1.3;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.6;
   margin: 0;
+  position: relative;
+  z-index: 1;
+  max-width: 520px; /* left-aligned block width */
 }
+
+/* Decorative arcs in banner corners (subtle) */
+.cta__wrapper::before,
+.cta__wrapper::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12); /* light circle */
+  z-index: 0;
+  pointer-events: none;
+}
+.cta__wrapper::before { top: 18px; left: 24px; }
+.cta__wrapper::after { top: 14px; right: 120px; }
+
+.cta__wrapper { position: relative; }
 
 .cta__buttons {
   display: flex;
   gap: 20px;
+  position: relative;
+  z-index: 1;
+  margin-left: auto; /* push buttons to right side */
 }
 
 .btn {
